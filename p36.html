@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #my_Div{
+            height: 500px;
+            width: 100%;
+            background-color: aquamarine;
+            padding: 10px;
+            font-weight: bold;
+            border : 1px solid black;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="my_Div">
+        <p>In this we will see the mousemmove eventType</p>
+    </div>
+    <button id="remove">Remove</button></br>
+    <button id="start"> start Again</button>
+    
+    <span id="demo"></span>
+
+    <script>
+    // remove Event Listener
+ 
+
+   let myDiv =  document.getElementById('my_Div')
+
+   function updateDemo(){
+    document.getElementById('demo').innerHTML = Math.random()*100+1;
+   }
+
+   myDiv.addEventListener('mousemove', updateDemo )
+    
+
+
+   document.getElementById('remove').addEventListener('click' , function(){
+    myDiv.removeEventListener('mousemove', updateDemo)
+    // let button = document.createElement('button')
+    //  button.appendChild(document.createTextNode('start'))
+    //  document.body.appendChild(button)
+    //  button.addEventListener('click' ,function(){
+    //     myDiv.addEventListener('mousemove' , updateDemo)
+    //  })
+   })
+
+
+   document.getElementById('start').addEventListener('click' ,function(){
+    myDiv.addEventListener('mousemove', updateDemo )
+   })
+
+    </script>
+</body>
+</html>

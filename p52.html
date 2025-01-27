@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="email" id="email" onchange="validateEmail()" />
+
+    <select id="colors" onchange="changeBackgroundColor()">
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+    </select>
+
+    <input type="text" id="username" onchange="updatePreview()" placeholder="Enter username" />
+    <p id="preview"></p>
+
+</body>
+<script>
+    function validateEmail() {
+        const email = document.getElementById("email").value;
+        if (!email.includes("@")) {
+            alert("Please enter a valid email address!");
+        }
+    }
+
+    function changeBackgroundColor() {
+        const color = document.getElementById("colors").value;
+        document.body.style.backgroundColor = color;
+    }
+    
+    function updatePreview() {
+        const username = document.getElementById("username").value;
+        document.getElementById("preview").textContent = `Hello, ${username}!`;
+    }
+
+    document.body.addEventListener("click", function(event) {
+    console.log(event.target);
+    console.log('Event Triggerd')
+});
+
+</script>
+
+</html>

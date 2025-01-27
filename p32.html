@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <div class="child">Monday</div>
+        <div class="child">Tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Thursday</div>
+        <div class="child">Friday</div>
+    </div>
+    
+    <span id="total"></span>
+
+    <div class ="parent1">
+        <div class="child">Monday</div>
+        <div class="child">Tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Thursday</div>
+        <div class="child">Friday</div>
+    </div>
+
+    <script>
+        let parent = document.getElementById('parent')
+        parent.style.backgroundColor = 'green'
+        parent.style.padding = '10px'
+        parent.style.borderRadius = '10px'
+        parent.getElementsByClassName('child')[1].style.backgroundColor = 'blue'
+        parent.getElementsByClassName('child')[2].style.color = 'yellow'
+        parent.getElementsByClassName('child')[4].style.color = 'white'
+        let node = parent.getElementsByClassName('child')
+ 
+        totalChild = document.getElementById('total').innerHTML = node.length
+
+
+        let parent1 = document.getElementsByClassName('parent1')[0]
+        parent1.style.margin = '10px'
+        parent1.style.backgroundColor = 'green'
+        parent1.style.padding = '10px'
+        parent1.style.borderRadius = '10px'
+        parent1.getElementsByClassName('child')[2].style.backgroundColor ='yellow'
+        
+
+        parent.setAttribute('title', 'hloG')
+        
+
+        let add = document.createElement('p')
+        add.textContent = 'hlo g kese ho sab'
+        parent.appendChild(add)
+        
+        let grandParent = Array.from(parent.children)   // parent is a single Dom identity and we cannot iterate over it for its child iteration we have to convert it into the as like parent.children
+
+        grandParent.forEach( (items) =>{
+            items.style.padding = '10px';
+        })
+
+
+
+    </script>
+</body>
+</html>

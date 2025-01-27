@@ -1,0 +1,50 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="xyz">
+    <!-- mouse event and properties -->
+
+    <h1 id="context">Lorem ipsum dolor sit amet.</h1>
+     <!-- <textarea name="text" id="context" colspan="4" rowspan="6"></textarea> -->
+ <span id="demo"></span>
+<div id = 'container' ><input type="text" id="mousedwn" placeholder="enter something">
+    <span id="demo1"></span>
+</div>
+ 
+ 
+ <script>
+       let contextmenu = document.getElementById('context')
+       contextmenu.addEventListener('contextmenu' , myfunction)
+
+       function myfunction(){
+        document.getElementById('demo').innerHTML = 'you right clicked over me'
+       }
+
+       let context1 = document.getElementById('mousedwn')
+       context1.addEventListener('click', myfunction1)
+
+      function myfunction1(){
+        document.getElementById('demo1').innerHTML = 'you mouse down over '
+       }
+
+       document.body.addEventListener('click', myFunction2)
+       
+      function myFunction2(){
+          document.getElementById('demo1').innerHTML = " "
+       }
+
+
+    //    context1.addEventListener('click' , myfunction2)
+    //    function myfunction2(){
+    //     document.getElementById('demo1').innerHTML = ''
+    //    }
+
+ </script>
+</body>
+</html> 

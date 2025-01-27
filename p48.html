@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="demo"></span>
+
+    <script>
+        window.addEventListener('offline' ,myfunction)
+        window.addEventListener('online', myfunction1)
+
+        function myfunction(){
+            alert('you are offline, please connect to internet')
+        }
+
+        function myfunction1(){
+            document.getElementById('demo').innerHTML = 'you are back online'
+        }
+        
+
+</script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Js</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <ul class="days">
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+    </ul>
+
+
+    <script>
+        function addDays (days) {
+            const li = document.createElement('li')
+            li.textContent = (days)
+            let cont = document.querySelector('.days').appendChild(li)
+        }
+       
+        addDays('Friday')
+
+         
+        function appendDays (addDays) {
+            const li = document.createElement('li')
+            li.appendChild(document.createTextNode(`${addDays}`))
+            document.querySelector('.days').appendChild(li)
+        }
+
+        appendDays('saturday')
+        appendDays('sunday')
+
+        // edit
+
+        const scndDay = document.querySelector('li:nth-child(2)')
+        scndDay.innerText = 'kese ho'
+        let newEdit = document.createElement('li')
+        newEdit.appendChild(document.createTextNode('mje kro'))
+        scndDay.replaceWith(newEdit)
+
+        // edit 
+
+        let IstDay = document.querySelector('li:first-child')
+        IstDay.outerHTML =' <li>i am a coder</li>'
+
+
+        // remove the element
+
+        let lastDay = document.querySelector('li:last-child')
+        lastDay.remove()
+
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="month">Monday</div>
+        <div class="month">Tuesday</div>
+        <div class="month">Wednesday</div>
+        <div class="month">Thursday</div>
+    </div>
+    <script>
+        // createElement
+        let div = document.createElement('div')
+       // div.textContent='how are you all'
+        div.id= 'my_Id'
+        div.className = 'hlog'
+        div.style.padding='10px'
+        div.style.color = 'yellow'
+        div.style.backgroundColor= 'green'
+        // let con = div
+        let addtext = document.createTextNode('i am a superman')
+        div.appendChild(addtext)
+        let div1 = document.querySelector('.parent').appendChild(div)
+         //document.body.appendChild(div1)
+
+        
+
+        let buk1 = document.createElement('div')
+        buk1.textContent = 'my name is nitesh'
+        buk1.style.color='yellow'
+        buk1.setAttribute('TITLE','HLOG')
+        buk1.id = 'my_id'
+        buk1.style.padding = '10px'
+        buk1.style.backgroundColor = 'green'
+        document.body.appendChild(buk1)
+
+    </script>
+</body>
+</html>

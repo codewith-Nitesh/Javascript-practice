@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="xyz">
+    <!-- mouse event and properties -->
+
+    <h1 id="context">Lorem ipsum dolor sit amet.</h1>
+    <span id="demo"></span>
+    <div id='container'>
+        <input type="text" id="mousedwn" placeholder="enter something">
+        <span id="demo1"></span>
+    </div>
+
+    <script>
+        let contextmenu = document.getElementById('context');
+        contextmenu.addEventListener('contextmenu', myfunction);
+
+        function myfunction() {
+            document.getElementById('demo').innerHTML = 'you right clicked over me';
+        }
+
+        let context1 = document.getElementById('mousedwn');
+        context1.addEventListener('mousedown', myfunction1);
+        context1.addEventListener('blur', clearDemo1); // Clear when input loses focus
+
+        function myfunction1() {
+            document.getElementById('demo1').innerHTML = 'you mouse down over the input';
+        }
+
+        function clearDemo1() {
+            document.getElementById('demo1').innerHTML = '';
+        }
+
+        //This will hide demo1 when clicking anywhere in the body
+        document.body.addEventListener('click', function(event) {
+            if (!context1.contains(event.target)) { // Check if the click is outside the input
+                clearDemo1();
+            }
+        });
+
+
+    </script>
+</body>
+</html>

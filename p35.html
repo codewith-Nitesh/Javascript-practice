@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- event Listener  -->
+
+    <p id="color">Lorem ipsum dolor sit amet.</p>
+    <!-- <div class="parent">
+        <div class="child">Football</div>
+        <div class="child">Cricket</div>
+        <div class="child">Volleyball</div>
+        <div class="child">Basketball</div>
+    </div> -->
+
+    
+     <!-- <button onclick="naam()">change</button> -->
+
+     <p id="col">my name is nitesh</p>
+     <button id="my_btn">change</button>
+     <a href="https://www.facebook.com" id="stop">Facebook</a>
+    <script>
+    //    let color = document.getElementById('color').addEventListener('click' , function (event){
+    //         // let change = document.querySelector('#color')
+    //         // change.style.backgroundColor = 'green'
+    //         console.log('hello g')
+    //     })
+
+        // document.getElementsByClassName('.parent').addEventListener('click', function (event){
+        //     console.log('kese ho sare ke sare')
+        // })
+
+        document.getElementById('my_btn').addEventListener('click' ,function(){
+            let element = document.getElementById('col')
+            element.style.backgroundColor = 'yellow'
+        })
+
+        document.getElementById('stop').addEventListener('click' , function(event){
+            event.preventDefault();
+            console.log('i am good ')
+            event.stopPropagation()
+        })
+
+
+    window.addEventListener('click' , function(event){
+            console.log('how are you all')
+    })
+
+
+// type, timeStamp, defaultPrevented, target , toElement , srcElement , currentTarget
+        // clientX, clientY , offsetX, offsetY, screenX, screenY
+        // altkey , ctrlKey , shiftKey , keyCode 
+
+        
+
+
+        
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="demo">Coordinates:</span><br>
+    <span id="demo1">Coordinates:</span><br>
+    <span id="demo2">Coordinates:</span><br>
+    <span id="demo3">Coordinates:</span><br>
+    <span id="demo4"></span><br>
+    <button onclick = "myFunction4(event)">click me</button>
+
+
+    <script>
+        window.addEventListener('mousemove', myFunction)
+        window.addEventListener('mousemove', myFunction1)
+        window.addEventListener('mousemove', myFunction2)
+        window.addEventListener('mousemove', myFunction3)
+        
+
+        function myFunction(event){
+            let x = event.clientX;
+            let y = event.clientY;
+            let text = "X coord : " +x + " Y coord : " + y
+            document.getElementById('demo').innerHTML = text
+        }
+
+        function myFunction1(event){
+            let x = event.screenX;
+            let y = event.screenY;
+            let text1 = "X coord : " + x + " Y coord : " + y
+            document.getElementById('demo1').innerHTML = text1
+        }
+
+        
+        function myFunction2(event){
+            let x = event.pageX;
+            let y = event.pageY;
+            let text2 = "X coord : " + x + " Y coord : " + y
+            document.getElementById('demo2').innerHTML = text2
+        }
+
+        function myFunction3(event){
+            let x = event.offsetX;
+            let y = event.offsetY;
+            let text3 = "X coord : " + x + " Y coord : " + y
+            document.getElementById('demo3').innerHTML = text3
+        }
+
+        function myFunction4(event){
+            let v = "Totaltime : " + event.timeStamp
+            document.getElementById('demo4').innerHTML = v
+        }
+
+
+        
+
+
+
+    </script>
+</body>
+</html>

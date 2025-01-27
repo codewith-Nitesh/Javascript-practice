@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<input type="text" id="input" placeholder="press any key"><br>
+<span id="key"></span>
+<br>
+<input type="text" id="input1" placeholder="release any key">
+<span id="key1"></span>
+    <script>
+        // keyBoard events and properties
+        // key down
+
+        let input = document.getElementById('input')
+        input.addEventListener('keydown',  myFunction)
+        function myFunction(event){
+            let key = document.getElementById('key')
+            key.innerHTML = `you pressed the ${event.key} key `
+        }
+
+        let input1 = document.getElementById('input1')
+        input1.addEventListener('keyup', myFunction1)
+
+       function myFunction1(event){
+           document.getElementById('key1').innerHTML = `you release the ${event.key}`
+        }
+
+
+    </script>
+</body>
+</html>

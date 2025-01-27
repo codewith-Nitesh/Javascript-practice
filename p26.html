@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Js</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .bigBuk{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent" id="container">
+        <div class="hlo">hy how are you</div>
+        <div class="hlo">i am fine</div>
+        <div class="hlo">i am an enginnering student</div>
+        <div class="hlo">i am also good</div>
+    </div>
+    <ul id="list" class="bigBuk">
+        <li class="hloG" >Mango</li>
+        <li class="hloG" >Grapes</li>
+        <li class="hloG" >Papaya</li>
+    </ul>
+
+    <script>
+        let cont = document.getElementById('container')
+        console.log(cont)
+        cont.setAttribute('hlo','hy')
+        // cont.getAttribute('parent').setAttribute('klo', 'hlo')
+        let content= document.getElementsByClassName('hlo')
+        content[1].style.backgroundColor='yellow'
+
+        let apply = Array.from(content)
+        apply.forEach((items) => {
+           console.log(items.style.backgroundColor='green',items.style.color='yellow')
+        })
+
+        let bucket = document.getElementsByClassName('hloG')
+        bucket[1].style.color='orange'
+        bucket[1].textContent='Orange'
+        bucket[2].innerHTML= 'yellow yellow is a dirty fellow'
+        bucket[0].innerText='brown'
+
+        let padding = Array.from(bucket)
+
+        padding.forEach( (items) => {
+           items.style.padding='5px',items.style.backgroundColor='yellow'
+        })
+
+        
+
+        
+         
+        
+
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="mousemove">hello G how are you hi nitesh whats going on </h2>
+    <span id="demo"></span>
+
+    <script>
+         document.getElementById('mousemove').addEventListener('mouseover', function(){
+            document.getElementById('demo').innerHTML = 'you mouseover it '
+         })
+
+
+
+         document.getElementById('mousemove').addEventListener('mouseLeave', function(){
+            document.getElementById('demo').innerHTML = 'mouse is out'
+         })
+
+
+
+         // keyboard and mouse events 
+    </script>
+</body>
+</html>

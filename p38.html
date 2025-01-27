@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="hy">Hlo everyone my name is nitesh choudhary</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+
+    <script>
+        // document.getElementsByTagName('h1').addEventListener('click' ,function(){
+        //     console.log('nitesh')
+        // },false)
+
+
+        // document.getElementById('hy').addEventListener('click' ,function(){
+        //     console.log('nitesh')
+        // },false)
+        
+let timeOutID;
+
+        document.getElementById('start').addEventListener('click' , function(){
+            timeOutId = setTimeout(started, 4000)
+            console.log('start')
+        })
+
+        function started(){
+                console.log('nitesh')
+            }
+
+        document.getElementById('stop').addEventListener('click' , function(){
+            clearTimeout(timeOutId)
+        console.log('stopped')
+        })
+
+        
+
+    </script>
+</body>
+</html>

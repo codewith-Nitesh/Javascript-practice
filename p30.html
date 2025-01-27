@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        body{
+            background-color:black;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+    
+        }
+        ul li {
+            list-style-type: none;
+        }
+        #images{
+            display: grid;
+            grid-template-columns: repeat(3,300px);
+            gap: 10px;
+            padding: 5px;
+        }
+        h2{
+            display: flex;
+            justify-content: center;
+        }
+        a{
+            color: yellow;
+        }
+    
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>My collections</h2>
+            <ul id="images">
+                <li>
+                       <img src="https://cdn.pixabay.com/photo/2014/11/21/17/17/house-540796_1280.jpg" 
+                       alt="img" id="house" width="300px">
+                </li>
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2024/01/08/15/54/defile-8495836_1280.jpg" 
+                    alt="img" id="mountains" width="300px">
+                </li>
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2023/08/04/22/59/sunset-8170058_1280.jpg" 
+                    alt="img" id="City" width="300px">
+                </li>
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2017/11/12/13/37/forest-2942477_1280.jpg" 
+                    alt="img" id="forest" width="300px">
+                </li>
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2023/09/05/16/39/sunrise-8235458_1280.jpg" 
+                    alt="img" id="sea" width="300px">
+                </li>
+                <li>
+                    <img src="https://cdn.pixabay.com/photo/2024/05/08/17/45/animal-8748794_1280.jpg" 
+                    alt="img" id="animal" width="300px">
+                </li>
+                <li>
+                    <a href="https://www.google.com" id="google" target="_blank">google</a>
+                </li>
+            </ul>
+        </div>
+        <script>
+            // let k = document.querySelector('#images')
+            // k.addEventListener('click' ,function(event){
+            //     console.log('hnji sikhte rho')
+            // },false)
+
+            // let i = document.getElementById('mountains')
+            // i.addEventListener('click', function (event){
+            //     console.log('hello i am mountain')
+            //     event.stopPropagation()
+            // },false)
+
+            // let link = document.querySelector('#google')
+            // link.addEventListener('click',function (event) {
+            //  event.preventDefault()
+            //  event.stopPropagation()
+            //  console.log('prevented from navigating')
+            // },false)
+
+            // let remove = document.getElementById('images')
+            // remove.addEventListener('click', function(event) {
+            //     console.log(event.target.parentNode)
+
+            //     let removeImg = event.target.parentNode
+            //     removeImg.remove()
+            // },false)
+
+             
+            document.getElementById('images').addEventListener( 'click', function(event) {
+                console.log(event.target.tagName)
+
+                if(event.target.tagName === 'IMG'){
+                    // console.log(event.target.id)
+
+                     let removeIt = event.target.parentNode
+                     removeIt.remove()
+                }
+            },false)
+            
+        </script>
+</body>
+</html>

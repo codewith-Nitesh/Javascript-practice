@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+     <span id="demo"></span><br>
+     <span id="demo1"></span><br>
+     <span id="demo2"></span><br>
+     <input type="text" value="hello" id="para">
+     <span id="demo3"></span>
+    <script>
+       let inField = document.getElementById('box')
+       let select = document.getElementById('para')
+       select.addEventListener('select', select1)
+       inField.addEventListener('mouseenter', myFunction)
+       inField.addEventListener('mouseleave' , myFunction1)
+       inField.addEventListener('mousedown', myFunction2)
+       inField.addEventListener('mouseup', myFunction3)
+       inField.addEventListener('mouseover' , myFunction4)
+       inField.addEventListener('mouseout', myFunction5)
+       inField.addEventListener('mousemove', myFunction6)
+
+
+        function select1(){
+            document.getElementById('demo3').innerHTML = 'you select something'
+        }
+
+       
+       function myFunction(){
+        document.getElementById('demo').innerHTML = 'your mouse point is inside the box'
+       }
+
+       function myFunction1(){
+        document.getElementById('demo').innerHTML = 'your mouse point is outside the box'
+       }
+
+       function myFunction2(){
+        document.getElementById('demo1').innerHTML = 'you mouse down'
+       }
+
+       function myFunction3(){
+        document.getElementById('demo1').innerHTML = 'you release the mouse'
+       }
+
+       function myFunction4(){
+        document.getElementById('box').style.backgroundColor = 'green'
+       }
+
+       function myFunction5(){
+        document.getElementById('box').style.backgroundColor = ''
+       }
+
+       function myFunction6(){
+        document.getElementById('demo2').innerHTML = 'you move the mouse on box'
+       }
+
+       inField.addEventListener('mouseout', myFunction7)
+
+       function myFunction7(){
+        document.getElementById('demo2').innerHTML = ''
+       }
+
+       
+
+    </script>
+</body>
+</html>

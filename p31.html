@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">Monday</div>
+        <div class="child">Tuesday</div>
+        <div class="child">Wednesday</div>
+        <div class="child">Thursday</div>
+        <div class="child">Fri</div>
+    </div>
+
+    <div class="parent1">
+        <div class="child1">Football</div>
+        <div class="child1">BasketBall</div>
+        <div class="child1">Tennis</div>
+        <div class="child1">Cricket</div>
+    </div>
+
+
+    <div class="bap">
+        <div class="bete">mohan</div>
+        <div class="bete">chaman</div>
+        <div class="bete">pawan</div>
+        <div class="bete">shrvan</div>
+        <div class="bete">haman</div>
+    </div>
+    <p id="demo"></p>
+
+    <script>
+        let parent = document.querySelector('.parent')
+        parent.style.backgroundColor = 'yellow'
+        parent.style.padding = '20px'
+        let child = document.querySelectorAll('.child')   // node list by queryselector
+        child[0].style.backgroundColor= 'green'
+        child[2].style.backgroundColor = 'blue'
+        child[4].style.backgroundColor = 'brown'
+        child[4].innerHTML = 'Friday'
+        child[3].outerHTML = '<cite>Thursday</cite>'
+        child[1].style.color = 'red'
+        let append = document.createElement('p')
+        append.textContent = 'how are you all'
+        append.style.backgroundColor = 'orange'
+        parent.appendChild(append)
+
+
+        let parent1 = document.getElementsByClassName('parent1')
+        parent1[0].style.backgroundColor ='green'
+        parent1[0].style.padding = '10px'
+        
+        let child1 = document.getElementsByClassName('child1')
+        child1[1].style.backgroundColor = 'yellow'
+        child1[1].textContent = 'hello G'
+        
+
+
+
+        parent.children[1].style.backgroundColor = 'yellow'  // queryselector ke sath .childrem
+
+        let papa = document.getElementsByClassName('bap')[0];
+        papa.getElementsByClassName('bete')[1].style.backgroundColor = 'green'
+        papa.getElementsByClassName('bete')[1].style.color = 'orange'
+        papapa= papa.getElementsByClassName('child')
+        document.getElementById('demo').innerHTML = papapa.length;
+        
+
+
+
+
+
+
+    </script>
+</body>
+</html>

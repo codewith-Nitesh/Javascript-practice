@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input" placeholder="Enter the text">
+     <span id="demo"></span>
+
+    <script>
+    let context = document.getElementById('input')
+    context.addEventListener('input' , myFunction)
+    context.addEventListener('blur', myFunction1)
+    function myFunction(){
+        document.getElementById('demo').innerHTML = 'you types something'
+    }
+    function myFunction1(){
+        document.getElementById('demo').innerHTML = ''
+    }
+    document.getElementById('input').addEventListener('input' , function(){
+        if(context.value == ""){
+        document.getElementById('demo').innerHTML = ""
+    }
+    })
+   
+
+    </script>
+</body>
+</html>
